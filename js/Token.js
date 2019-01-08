@@ -7,7 +7,7 @@ class Token {
   }
 
   drawHTMLToken() {
-    let token = document.createElement('div');
+    const token = document.createElement('div');
     document.getElementById('game-board-underlay').appendChild(token);
     token.setAttribute('id', this.id);
     token.setAttribute('class', 'token');
@@ -17,5 +17,5 @@ class Token {
   get htmlToken() {
     return this.drawHTMLToken();
   }
-  
+
 }

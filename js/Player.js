@@ -10,7 +10,7 @@ class Player {
 
   /**
   * Generates the number of tokens speified
-  * @return {array} An array of token objects
+  * @return {Array} An array of token objects
   **/
 
   createTokens(num) {
@@ -19,6 +19,24 @@ class Player {
       tokens.push(new Token(i, this));
     }
     return tokens;
+  }
+
+  /**
+  * Tokens a player hasn't played yet
+  * @return {Array} Array of unused tokens
+  **/
+
+  get unusedTokens () {
+    return this.tokens.filter(token => !token.played);
+  }
+
+  /**
+  * A players active token
+  * @return {Object} The first token in the array of unused tokens
+  **/
+
+  get activeToken () {
+    return this.unusedTokens[0];
   }
 
 }
