@@ -1,4 +1,5 @@
 class Space {
+
   constructor(x, y) {
     this.x = x;
     this.y = y;
@@ -7,6 +8,7 @@ class Space {
     this.id = `space-${x}-${y}`;
     this.token = null;
   }
+
   drawSVGSpace() {
     const svgSpace = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     svgSpace.setAttributeNS(null, "id", this.id);
@@ -17,4 +19,5 @@ class Space {
     svgSpace.setAttributeNS(null, "stroke", "none");
     document.getElementById("mask").appendChild(svgSpace);
   }
+  
 }

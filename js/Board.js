@@ -1,9 +1,16 @@
 class Board {
+
   constructor () {
     this.rows = 6;
     this.columns = 7;
     this.spaces = this.createSpaces();
   }
+
+  /**
+   * Generates 2D array of spaces
+   * @return {array} An array of space objects
+  **/
+
   createSpaces() {
     const spaces = [];
     for (let i = 0; i < this.columns; i++) {
@@ -16,6 +23,7 @@ class Board {
     }
     return spaces;
   }
+
   drawHTMLBoard() {
     for (let column of this.spaces) {
       for (let space of column) {
@@ -23,4 +31,5 @@ class Board {
       }
     }
   }
+
 }
