@@ -1,11 +1,11 @@
 class Player {
 
   constructor (name, id, color, active = false) {
-    name = this.name;
-    id = this.id;
-    color = this.color;
-    turn = this.active;
-    tokens = createTokens(21);
+    this.name = name;
+    this.id = id;
+    this.color = color;
+    this.active = active;
+    this.tokens = this.createTokens(21);
   }
 
   /**
@@ -27,7 +27,7 @@ class Player {
   **/
 
   get unusedTokens () {
-    return this.tokens.filter(token => !token.played);
+    return this.tokens.filter(token => !token.dropped);
   }
 
   /**

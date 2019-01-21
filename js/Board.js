@@ -16,7 +16,7 @@ class Board {
     for (let i = 0; i < this.columns; i++) {
       const column = [];
       for (let j = 0; j < this.rows; j++) {
-        const space = new Space(x, y);
+        const space = new Space(i, j);
         column.push(space);
       }
       spaces.push(column)

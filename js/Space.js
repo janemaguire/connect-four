@@ -3,8 +3,8 @@ class Space {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.diameter: 76;
-    this.radius: this.diameter/2;
+    this.diameter = 76;
+    this.radius = this.diameter/2;
     this.id = `space-${x}-${y}`;
     this.token = null;
   }
@@ -19,5 +19,5 @@ class Space {
     svgSpace.setAttributeNS(null, "stroke", "none");
     document.getElementById("mask").appendChild(svgSpace);
   }
-  
+
 }
